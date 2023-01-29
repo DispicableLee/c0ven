@@ -1,19 +1,20 @@
 import React from "react";
-import HomeRoom from "./HomeRoom";
+import HomeRoomSlide from "./HomeRoomSlide";
 export default function Home() {
   return (
-    <div>
-      <aside className="home-left">
-        <div>
-          <HomeRoom />
-        </div>
-        <div>
-            {/* HomeProjects */}
-        </div>
-      </aside>
-
-      <aside className="home-right">
-
+    <div style={{
+      color: 'white',
+      paddingTop: '40px'
+    }}>
+      <aside style={{
+        paddingLeft: '40px',
+        position: 'relative',
+        float: 'left'
+      }}>
+        <h1>
+          hi
+        </h1>
+        <HomeRoomSlide/>
       </aside>
     </div>
   );

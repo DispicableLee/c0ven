@@ -1,3 +1,4 @@
-.nav-main {
-    background-color: rgb(35, 12, 51);
-}
+.nav-bar {
+    flex-grow: '1';
+    padding: '10px, 10px, 20px, 30px'
+    }
