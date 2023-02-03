@@ -4,11 +4,13 @@ export default function Home() {
   return (
     <div style={{
       color: 'white',
-      paddingTop: '40px'
+      padding: '40px'
     }}>
+
+
       <aside style={{
         paddingLeft: '40px',
-        position: 'relative',
+        // position: 'relative',
         float: 'left'
       }}>
         <h1>

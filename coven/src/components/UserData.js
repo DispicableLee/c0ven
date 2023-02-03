@@ -3,8 +3,6 @@ var UserData = (function () {
   var iD = "";
   var userName = "";
   var passWord = "";
-  var eMail = "";
-  var fullName = "";
   var iMage = "";
 
   //======================= get data =========================
@@ -19,13 +17,6 @@ var UserData = (function () {
   var getPassword = ()=>{
     return passWord
   }
-  var getEmail = () => {
-    return eMail;
-  };
-
-  var getName = () => {
-    return fullName;
-  };
   var getImage = () => {
     return iMage;
   };
@@ -43,16 +34,6 @@ var UserData = (function () {
   var setPassword = (password)=>{
     passWord = password
     localStorage.setItem("password", passWord)
-  }
-  var setName = function (name) {
-    fullName = name;
-    // Also set this in cookie/localStorage
-    localStorage.setItem("name", fullName);
-  };
-
-  var setEmail = (email)=>{
-    eMail = email
-    localStorage.setItem("email", eMail)
   }
 
   var setImage = (image)=>{
@@ -73,12 +54,6 @@ var UserData = (function () {
 
     getPassword: getPassword,
     setPassword: setPassword,
-
-    getEmail: getEmail,
-    setEmail: setEmail,
-
-    getName: getName,
-    setName: setName,
 
     getImage: getImage,
     setImage: setImage,
