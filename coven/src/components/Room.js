@@ -1,66 +1,86 @@
 import React from "react";
+import RoomUsers from "./RoomUsers";
+import "./Room.css";
 import MessageTile from "./MessageTile";
 import { useState, useEffect } from "react";
 
 export default function Room() {
   const [messageHover, setMessageHover] = useState(false);
-  const messageCount = [1, 1, 1];
+  const [displayUsers, setDisplayUsers] = useState(false);
+  const messageCount = [1, 1, 1, 1, 1, 1, 1, 1];
+  const userCount = [1, 1, 1, 1,1,1,1,1,1,1,];
+  const [fecthedMessages, setFecthedMessages] = useState([]);
+  useEffect(() => {}, []);
 
-  const renderedMessages = messageCount.map((m) => {
-    return (
-      <MessageTile/>
-    );
-  });
+  //============== show user box open close =============================================
+  function showUsers() {
+    setDisplayUsers(!displayUsers);
+  }
 
   function setHover() {
     setMessageHover(!messageHover);
   }
-  return (
-    <div
-      className="room-div"
-      style={{
-        border: "1px solid white",
-        height: "700px",
-        margin: "20px",
-        paddingTop: "0",
-        display: "flex",
-      }}
-    >
-      <div
-        className="room-header-bar"
-        style={{
-          backgroundColor: "#34E4EA",
-          width: "100%",
-          height: "15%",
-          position: "sticky",
-        }}
+
+  //======================= data mapping ========================================
+  const renderedMessages = messageCount.map((m) => {
+    return <MessageTile />;
+  });
+  //============================================
+  const roomUsers = userCount.map((u) => {
+    return (
+      <div className="room-user-card"
       >
-        <h1>Room</h1>
-        <div>
-            
+        <h1>hi</h1>
+      </div>
+    );
+  });
+
+  return (
+    <div className="room-div">
+      <div className="room-header-bar">
+        <div className="room-title">
+          <h1>Room</h1>
+          <button className="show-users-button" onClick={showUsers}>
+            USERS
+          </button>
+        </div>
+        {/* ==================== room users box ====================================== */}
+        <div
+          className="show-users box"
+          style={{
+            backgroundColor: "black",
+            height: "450%",
+            width: "30%",
+            visibility: displayUsers ? "visible" : "hidden",
+            paddingTop: "10px",
+            overflow: 'auto'
+          }}
+        >
+          {roomUsers}
         </div>
       </div>
-      <br/>
+      <br />
       <aside
         className="message-board"
         onMouseEnter={setHover}
         onMouseLeave={setHover}
         style={{
-          border: "1px solid #34E4EA",
           float: "right",
           backgroundColor: "black",
-          display: "table-column",
-          width: messageHover ? "40%" : "20%",
+          width: messageHover ? "30%" : "20%",
+          height: "400",
+          overflow: "auto",
         }}
       >
         <div
           className="message-board-header"
           style={{
             backgroundColor: "#D30C7B",
+            width: "100%",
             height: "7.5%",
+            position: "static",
           }}
         >
-        
           <h2>messages</h2>
         </div>
         {renderedMessages}

@@ -21,7 +21,6 @@ function App() {
   <div>
     <div className="App">
       <NavBar />
-      <Home />
       {/* ============ sign in dialog ============================== */}
       {dialogState ? (
         <SignUpInDialog/>
@@ -32,7 +31,7 @@ function App() {
       <Footer openSignUpIn={openSignUpIn} />
     </div>
       <Routes>
-        {/* <Route path="/" element={<Home/>}/> */}
+        <Route path="/" element={<Home/>}/>
         <Route path="/room" element={<Room/>}/>
       </Routes>
   </div>

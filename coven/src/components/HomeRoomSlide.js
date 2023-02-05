@@ -37,9 +37,8 @@ export default function HomeRoomSlide(){
             <aside style={{
                 float: 'left',
                 display: 'flex',
-                width: '40%',
-                clear: 'both'
-            
+                width: '50%'
+                
             }}>
             {myRooms}
 
@@ -47,8 +46,10 @@ export default function HomeRoomSlide(){
 
             <aside style={{
                 float: 'right',
-                display: 'flex',
+                display: 'block',
                 width: '40%',
+                height: '50%',
+                overflow: 'auto'
             }}>
                 {homeRoomDisplay}
             </aside>

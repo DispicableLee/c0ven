@@ -1,0 +1,19 @@
+.card-box {
+    background-color: #D30C7B;
+    color: black;
+    margin-top: 5px;
+    height: 75px;
+    }
+
+.card-header {
+    border: 1px solid #D30C7B;
+    color: #D30C7B;
+    margin: 20px;
+    height: 300px;
+}
+
+.card-footer {
+    border-top: 1px solid #D30C7B;
+    text-align: center;
+    height: 20px;
+}

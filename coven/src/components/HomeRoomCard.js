@@ -1,25 +1,18 @@
 import React from "react";
 import Box from "@mui/material/Box";
+import { useState } from "react";
+import '../components/HomeRoomCard.css'
 
 export default function HomeRoomCard() {
+  const [roomFocused, setRoomFocused ] = useState(false)
+  function roomFocus(){
+    setRoomFocused(!roomFocused)
+  }
   return (
-    <div
-      style={{
-        border: "1px solid #D30C7B",
-        color: "#D30C7B",
-        margin: "20px",
-        maxWidth: '400px',
-        height: '400px',
-        flex: '50%'
-      }}
+    <div className="card-header"
     >
       <Box>
-        <div style={{
-            backgroundColor: '#D30C7B',
-            color: 'black',
-            marginTop: '5px',
-            height: '75px'
-        }}>
+        <div className="card-box">
             <h1>Room_name</h1>
             <h3>people currently here: </h3>
         </div>
@@ -30,11 +23,7 @@ export default function HomeRoomCard() {
 
         
         </Box>
-      <Box style={{
-        // postion: 'absolute',
-        borderTop: '1px solid #D30C7B',
-        height: '20px'
-      }}>
+      <Box className="card-footer">
         <h1>i am not logged in</h1>
       </Box>
     </div>
