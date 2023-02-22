@@ -1,0 +1,8 @@
+.footer-bar {
+    top: auto;
+    bottom: 0;
+    background-color: black;
+    margin-top: 30px;
+    height: 10%;
+    position: fixed;
+}

@@ -5,9 +5,8 @@ import Home from "./components/Home";
 import SignUpInDialog from "./components/SignUpInDialog";
 import Footer from "./components/Footer";
 import Room from "./components/Room";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Route, Routes, Link } from "react-router-dom";
-import { height } from "@mui/system";
 import UserData from './components/UserData'
 
 function App() {
@@ -32,7 +31,7 @@ function App() {
     </div>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/room" element={<Room/>}/>
+        <Route path="/room/:roomid" element={<Room/>} />
       </Routes>
   </div>
   );

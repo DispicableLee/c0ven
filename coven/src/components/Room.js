@@ -3,6 +3,7 @@ import RoomUsers from "./RoomUsers";
 import "./Room.css";
 import MessageTile from "./MessageTile";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 export default function Room() {
   const [messageHover, setMessageHover] = useState(false);
@@ -10,7 +11,16 @@ export default function Room() {
   const messageCount = [1, 1, 1, 1, 1, 1, 1, 1];
   const userCount = [1, 1, 1, 1,1,1,1,1,1,1,];
   const [fecthedMessages, setFecthedMessages] = useState([]);
-  useEffect(() => {}, []);
+  let {roomid} = useParams()
+
+  useEffect(() => {
+    console.log(roomid)
+    fetch(`http://localhost:4002/api/v2/endPoints/search/room/${roomid}`)
+         .then((r)=>r.json())
+         .then((json)=>{
+             console.log(json)
+           })
+  }, []);
 
   //============== show user box open close =============================================
   function showUsers() {

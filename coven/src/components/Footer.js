@@ -6,6 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import { Button } from "@mui/material";
 import { fontSize, maxHeight } from "@mui/system";
 import UserData from "./UserData";
+import './Footer.css'
 
 export default function Footer({ openSignUpIn }) {
   const userID = localStorage.id;
@@ -15,16 +16,7 @@ export default function Footer({ openSignUpIn }) {
   }
   return userID ? (
     // ========================= SIGN OUT STATE ======================================
-    <AppBar
-      color="primary"
-      sx={{
-        top: "auto",
-        bottom: 0,
-        backgroundColor: "black",
-        marginTop: '30px',
-        height: '10%',
-        position: 'fixed'
-      }}
+    <AppBar className="footer-bar"
     >
       <Toolbar>
         <Box sx={{ flexGrow: 1 }} />
