@@ -17,6 +17,14 @@ export default function Footer({ openSignUpIn }) {
   return userID ? (
     // ========================= SIGN OUT STATE ======================================
     <AppBar className="footer-bar"
+      style={{
+        top: "auto",
+        bottom: "0",
+        backgroundColor: "black",
+        marginTop: "30px",
+        height: "10%",
+        position: "fixed"
+      }}
     >
       <Toolbar>
         <Box sx={{ flexGrow: 1 }} />

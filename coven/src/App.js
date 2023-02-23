@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import SignUpInDialog from "./components/SignUpInDialog";
 import Footer from "./components/Footer";
 import Room from "./components/Room";
+import ProjectsList from "./components/ProjectsList";
 import { useState, useEffect } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import UserData from './components/UserData'
@@ -31,6 +32,7 @@ function App() {
     </div>
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/projects-list" element={<ProjectsList/>}/>
         <Route path="/room/:roomid" element={<Room/>} />
       </Routes>
   </div>
