@@ -1,8 +1,10 @@
-.footer-bar {
+.footer-button {
+    background-color: #D30C7B;
+    height: 125px;
+    width: 15%;
+    font-size: 40px;
     top: auto;
     bottom: 0;
-    background-color: black;
-    margin-top: 30px;
-    height: 10%;
-    position: fixed;
+    right: 0;
+    position: absolute
 }

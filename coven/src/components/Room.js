@@ -48,12 +48,10 @@ export default function Room() {
   return (
     <div className="room-div">
       <div className="room-header-bar">
-        <div className="room-title">
           <h1>Room</h1>
           <button className="show-users-button" onClick={showUsers}>
             USERS
           </button>
-        </div>
         {/* ==================== room users box ====================================== */}
         <div
           className="show-users box"
@@ -88,7 +86,6 @@ export default function Room() {
             backgroundColor: "#D30C7B",
             width: "100%",
             height: "7.5%",
-            position: "static",
           }}
         >
           <h2>messages</h2>
@@ -99,7 +96,8 @@ export default function Room() {
         className="room-bottom"
         style={{
           borderTop: "1px solid #34E4EA",
-          width: "90%",
+          backgroundColor: 'black',
+          width: "100%",
           height: "10%",
           position: "absolute",
           bottom: "0",

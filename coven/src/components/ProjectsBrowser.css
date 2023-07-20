@@ -1,0 +1,87 @@
+.explore-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    gap: 55px;
+    width: 75%;
+    height: 1000px;
+    border: 1px solid #D30C7B
+}
+
+.five-projects-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+    margin: 20px;
+    gap: 30px;
+    border: 1px solid #9F9FAD;
+    width: 75%;
+    height: 120px;
+}
+
+
+
+/* ====================== five-row-cards ============================*/
+.frc-box {
+    border: 1px solid #D30C7B;
+    height: 150px;
+    width: 20%;
+}
+
+.frc-box img{
+    width: 100%;
+    height: 65%
+}
+
+.frc-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 11px;
+    gap: 10px;
+    height: 20%;
+    background-color: #D30C7B
+}
+/* ================================= showcase ===================== */
+
+.showcase-window{
+    border: 1px solid #9F9FAD;
+    height: 12000px;
+    width: 80%;
+    color:#D30C7B
+}
+
+.showcase-instant-info{
+    display: flex;
+    flex-direction: row;
+    height: 60%
+}
+
+.showcase-image{
+    border: 1px solid white;
+    width: 70%;
+    height: 100%;
+}
+
+.showcase-contributors {
+    border: 1px solid pink;
+    height: 100%;
+    width: 30%;
+    color:black
+}
+
+.s-c-title{
+    background-color: #D30C7B;
+    height: 10%;
+    text-align: center;
+}
+
+/* ================================ showcase description =============================== */
+
+.title-description{
+    height: 35%;
+}
