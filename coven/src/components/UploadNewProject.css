@@ -6,47 +6,60 @@
   /* other formats include: 'woff2', 'truetype, 'opentype',
                             'embedded-opentype', and 'svg' */
 }
-
+/* container box styling */
 #container-box{
     display: flex;
-    height: 2000px;
+    height: 80%;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     border: 1px solid #D30C7B;
     margin: 40px
 }
 
 #container-box .title{
-    color: #34E4EA
+    display: flex;
+    width: 1215px;
+    height: 235px;
+    padding: 0px 3px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
 }
 
-.heading-one{
-    /* font-weight: 600; */
+/* .title.animate-enter{
+    animation: animate-enter-frames 0.5s ease-in-out 0s 1 normal forwards;
+    opacity: 0;
+    transform: translate(0, 25px);
+} */
+
+/* heading styling */
+#container-box h1, #container-box h2{
     font-size: 48px;
     font-family: "Smooch Sans";
     -webkit-text-fill-color: black;
     -webkit-text-stroke: 1px #34E4EA;
 }
-
-.heading-two{
-    font-size: 48px;
-    font-family: "Smooch Sans";
-    -webkit-text-fill-color: black;
-    -webkit-text-stroke: 1px #34E4EA;
+#container-box p{
+    color: white
 }
-
-section{
+/* text-input/textarea styling */
+.text-input-field{
     display: flex;
     width: 1146px;
     padding: 26px 61px;
     align-items: flex-start;
     gap: 263px;
 }
+.text-input-field h2{
+    font-size: 48px;
+    font-family: "Smooch Sans";
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke: 1px #34E4EA;
+}
 
 
-/* ================================= form styling =============================== */
-#project-name-input, #project-link{
+/*  form styling  */
+.text-input-field input{
     align-self: center;
     background-color: black;
     border: none;
@@ -56,42 +69,37 @@ section{
     font-size: 40px;
     border-bottom: 1px solid #34E4EA;   
 }   
-#project-name-input, #project-link:focus{
+.text-input-field input:focus{
     outline: none;
 }
 
-
-
-#project-description-input{
+.text-input-field textarea{
     align-self: center;
     background-color: black;
     height: 200px;
     width: 450px;
     color: white;
     font-size: 30px;
+    border: 1px solid #34E4EA;
 }
 
-.file-handle{
-    
-}
 
+
+/* image upload styling */
+.project-image{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
 .file-handle:hover{
     color: #34E4EA;
-    cursor: progress;
+    cursor: pointer;
 }
 
-#image-handler{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
 
-#preview-box{
-    border: #34E4EA;
-    height: 200px;
-    width: 200px
-}
+
+
 
 .submit{
     display: flex;
@@ -160,8 +168,57 @@ section{
 /* ========================= preview final submission =========================*/
 
 #preview-box{
-    border: #93D24B;
+    display: flex;
+    width: 1158px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid white;
 }
+.preview-image-contributors{
+    /* div that contains both img and aside */
+    width:100%;
+    height: 60%;
+    display: flex;
+    padding: 10px;
+
+    
+
+}
+
 #preview-box h3{
     color: #93D24B;
 }
+
+.preview-image-contributors img{
+    height: 35vh;
+    width: 60vh
+}
+
+
+#preview-box aside{
+    width: 35%;
+    height: 35vh;
+    float: right;
+}
+
+
+
+#preview-description-info{
+    border-top: 1px solid #93D24B;
+    display: flex;
+    height: 25vh;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+#preview-description-info div{
+    /* border: 1px solid white; */
+    height: 100%;
+    width: 50%;
+    margin: 10px
+}
+
