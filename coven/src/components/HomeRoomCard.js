@@ -22,23 +22,20 @@ export default function HomeRoomCard({name, image, admins, projects, id}) {
 
 
   return (
-    <div 
-      className="card-header"
+    <div className="card-box"
       onClick={()=>showId(id)}
       >
-      <Box>
-        <div className="card-box">
+        <div className="title-pop-box">
             <Link to={`/room/${id}`}>{name}</Link>
             <h3>people currently here: </h3>
         </div>
-      </Box>
         <Box style={{
             height: '40%'
         }}>
         </Box>
-      <Box className="card-footer">
+      <div className="card-footer">
         <h1>i am not logged in</h1>
-      </Box>
+      </div>
     </div>
   );
 }

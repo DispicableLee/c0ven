@@ -6,6 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import { Button } from "@mui/material";
 import { fontSize, maxHeight } from "@mui/system";
 import UserData from "./UserData";
+import FooterSignOut from "./FooterSignOut"
 import './Footer.css'
 
 export default function Footer({ openSignUpIn }) {

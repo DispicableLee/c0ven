@@ -1,6 +1,7 @@
 import React from "react";
 import HomeRoomCard from "./HomeRoomCard";
 import { useState, useEffect } from "react";
+import "./HomeRoomSlide.css"
 
 export default function HomeRoomSlide(){
     const myRoomArray = [1,2]
@@ -21,7 +22,7 @@ export default function HomeRoomSlide(){
             />
         )
     })
-    const homeRoomDisplay = fetchedRooms.map((r)=>{
+    const joinedRooms = fetchedRooms.map((r)=>{
         return (
             <HomeRoomCard 
                 name = {r.name}
@@ -32,30 +33,34 @@ export default function HomeRoomSlide(){
             />
         )
     })
+    // ======================= return ========================================
     return (
 
-        <div style={{
-            width: '1000px'
-        }}>
+        <div 
+            id="rooms-gallery"
+            style={{
+                width: '80vh',
+                border:"1px solid white"
+            }}
+            >
+            
             {localStorage.id ? 
-            <aside style={{
-                float: 'left',
-                display: 'flex',
-                width: '50%'
-                
-            }}>
-            {myRooms}
-
+            <aside id="my-rooms">
+                <h1>my rooms</h1>
+                {myRooms}
             </aside> : <></>}
 
-            <aside style={{
-                float: 'right',
-                display: 'block',
-                width: '40%',
-                height: '50%',
-                overflow: 'auto'
-            }}>
-                {homeRoomDisplay}
+            <aside id="joined-rooms"
+                // style={{
+                //     float: 'right',
+                //     display: 'block',
+                //     width: '40%',
+                //     height: '50%',
+                //     overflow: 'auto'
+                // }}
+            >
+                <h1>Joined Rooms</h1>
+                {joinedRooms}
             </aside>
         </div>
     )

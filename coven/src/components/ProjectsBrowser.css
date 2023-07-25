@@ -61,20 +61,20 @@
     height: 60%
 }
 
-.showcase-image{
-    border: 1px solid white;
+.showcase-instant-info img{
+    border: none;
     width: 70%;
     height: 100%;
 }
 
-.showcase-contributors {
+.showcase-instant-info aside {
     border: 1px solid pink;
     height: 100%;
     width: 30%;
     color:black
 }
 
-.s-c-title{
+.showcase-instant-info aside h1{
     background-color: #D30C7B;
     height: 10%;
     text-align: center;

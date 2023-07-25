@@ -1,0 +1,28 @@
+/* .rooms-gallery{
+    width: 60vh;
+    display: inline-flex;
+    padding: 0px 140px;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+} */
+
+
+.my-rooms{
+    display: inline-flex;
+    width: 30%;
+    padding: 12px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+    flex-shrink: 0;
+    overflow: auto;
+    border: 1px solid #9F9FAD
+}
+
+.joined-rooms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}

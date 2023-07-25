@@ -70,9 +70,9 @@ export default function ProjectsBrowser({ fetchedProjects }) {
       {/* ========================== make own component? ===================================== */}
       <div className="showcase-window">
         <div className="showcase-instant-info">
-          <img className="showcase-image" src={showcaseImage}/>
-          <aside className="showcase-contributors">
-            <h1 className="s-c-title">contributors</h1>
+          <img src={showcaseImage}/>
+          <aside>
+            <h1>contributors</h1>
             {/* {contributorsList} */}
           </aside>
         </div>

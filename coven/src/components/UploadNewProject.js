@@ -12,22 +12,29 @@ export default function UploadNewProject(){
     const [formImage, setFormImage] = useState()
     const [formDescription, setFormDescription] = useState()
     const [formLink, setFormLink] = useState()
+//================== form submission ===============================
+// function subimtForm(e){
+//     const newObj = {
+//         name: formName,
+//         image: formImage,
+//         userid: String,
+//         description: formDescription,
+//         contributors: [],
+//         spectators: [],
+//         messages: [],
+//         link: formLink
+//     }
+//     e.preventDefault()
+//     fetch(`http://localhost:4002/api/v2/endPoints/new/project/${userid}`,{
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify()
+//     })
 
-    // create a preview as a side effect, whenever selected file is changed
-    // useEffect(() => {
-    //     if (!selectedFile) {
-    //         setPreview(undefined)
-    //         return
-    //     }
-    //     const objectUrl = URL.createObjectURL(selectedFile)
-    //     console.log(objectUrl)
-    //     setPreview(objectUrl)
-    //     setFormImage(preview)
+// }
 
-    //     // free memory when ever this component is unmounted
-    //     return () => URL.revokeObjectURL(objectUrl)
-
-    // }, [selectedFile])
 // ======================= image file processing ===========================================
     function onSelectFile(e) {
         // I've kept this example simple by using the first image instead of multiple
