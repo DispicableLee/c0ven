@@ -1,28 +1,23 @@
-/* .rooms-gallery{
-    width: 60vh;
-    display: inline-flex;
-    padding: 0px 140px;
-    justify-content: center;
-    align-items: center;
-    gap: 55px;
-} */
+#rooms-gallery{
+    border-bottom: 1px solid white;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
 
 
-.my-rooms{
+.room-slide-container{
     display: inline-flex;
-    width: 30%;
     padding: 12px 20px;
     flex-direction: column;
     align-items: center;
     gap: 17px;
     flex-shrink: 0;
     overflow: auto;
-    border: 1px solid #9F9FAD
+    margin: 20px
 }
 
-.joined-rooms{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
+.room-slide-container:hover{
+    border-left: 1px solid #9F9FAD;
+    border-right: 1px solid #9F9FAD
 }

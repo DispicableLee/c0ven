@@ -1,4 +1,27 @@
-.nav-bar {
-    flex-grow: '1';
-    padding: '10px, 10px, 20px, 30px'
-    }
+/*========================== fonts ============================*/
+@font-face {
+  font-family: 'Smooch Sans';
+  src: local('Smooch Sans'), url(../styles/fonts/SmoochSans.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+
+#nav-bar {
+    flex-grow: 1;
+    padding: 10px 30px 10px 30px;
+    /* border: 1px solid white; */
+}
+
+.title-header{
+    /* border: 1px solid white; */
+    display: flex;
+}
+
+.title-header h1 :any-link{
+    -webkit-text-fill-color: white;
+    font-family: "Smooch Sans";
+    font-size: 60px;
+    
+
+}

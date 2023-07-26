@@ -11,29 +11,13 @@ import '../styles/NavBar.css'
 
 export default function NavBar() {
   return (
-    <Box 
-      className="nav-bar"
-      style={{ 
-        flexGrow: 1,
-        padding: '10px 10px 20px 40px'
-      }}
-      >
-        <div
-          className='title-header'
-          style={{
-            color: 'white',
-            display: 'flex',
-          }}
-        >
-          <h1 className='title'
-            style={{
-              fontFamily: 'monospace'
-            }}
-          >
+    <div id="nav-bar">
+        <div className='title-header'>
+          <h1 className='title'>
             <Link to="/">c0ven</Link>
           </h1>
 
         </div>
-    </Box>
+    </div>
   );
 }

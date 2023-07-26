@@ -1,7 +1,7 @@
 import React from "react";
 import HomeRoomCard from "./HomeRoomCard";
 import { useState, useEffect } from "react";
-import "./HomeRoomSlide.css"
+import '../components/HomeRoomSlide.css'
 
 export default function HomeRoomSlide(){
     const myRoomArray = [1,2]
@@ -36,29 +36,13 @@ export default function HomeRoomSlide(){
     // ======================= return ========================================
     return (
 
-        <div 
-            id="rooms-gallery"
-            style={{
-                width: '80vh',
-                border:"1px solid white"
-            }}
-            >
-            
-            {localStorage.id ? 
-            <aside id="my-rooms">
+        <div id="rooms-gallery">
+            <aside className="room-slide-container">
                 <h1>my rooms</h1>
                 {myRooms}
-            </aside> : <></>}
+            </aside> 
 
-            <aside id="joined-rooms"
-                // style={{
-                //     float: 'right',
-                //     display: 'block',
-                //     width: '40%',
-                //     height: '50%',
-                //     overflow: 'auto'
-                // }}
-            >
+            <aside className="room-slide-container">
                 <h1>Joined Rooms</h1>
                 {joinedRooms}
             </aside>

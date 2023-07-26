@@ -4,18 +4,17 @@ export default function Home() {
   return (
     <div style={{
       color: 'white',
-      padding: '40px',
+      // padding: '40px',
     }}>
-      <aside style={{
-        paddingLeft: '40px',
-        // position: 'relative',
-        float: 'left'
+      <div style={{
+        // paddingLeft: '40px',
+        width: '100vh',
+        display: 'flex',
+        justifyContent: 'center'
+        // float: 'left'
       }}>
-        <h1>
-          Rooms
-        </h1>
         <HomeRoomSlide/>
-      </aside>
+      </div>
     </div>
   );
 }
