@@ -49,60 +49,16 @@ export default function Room() {
     <div className="room-div">
       <div className="room-header-bar">
           <h1>Room</h1>
-          <button className="show-users-button" onClick={showUsers}>
-            USERS
-          </button>
-        {/* ==================== room users box ====================================== */}
-        <div
-          className="show-users box"
-          style={{
-            backgroundColor: "black",
-            height: "450%",
-            width: "30%",
-            visibility: displayUsers ? "visible" : "hidden",
-            paddingTop: "10px",
-            overflow: 'auto'
-          }}
-        >
-          {roomUsers}
-        </div>
+          <div id="dropdown-users">
+            <button className="drp-btn">
+
+            </button>
+          </div>
       </div>
       <br />
-      <aside
-        className="message-board"
-        onMouseEnter={setHover}
-        onMouseLeave={setHover}
-        style={{
-          float: "right",
-          backgroundColor: "black",
-          width: messageHover ? "30%" : "20%",
-          height: "400",
-          overflow: "auto",
-        }}
-      >
-        <div
-          className="message-board-header"
-          style={{
-            backgroundColor: "#D30C7B",
-            width: "100%",
-            height: "7.5%",
-          }}
-        >
-          <h2>messages</h2>
-        </div>
-        {renderedMessages}
-      </aside>
-      <div
-        className="room-bottom"
-        style={{
-          borderTop: "1px solid #34E4EA",
-          backgroundColor: 'black',
-          width: "100%",
-          height: "10%",
-          position: "absolute",
-          bottom: "0",
-        }}
-      ></div>
+      <div className="room-bottom">
+
+      </div>
     </div>
   );
 }

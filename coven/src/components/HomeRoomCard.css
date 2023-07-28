@@ -1,11 +1,13 @@
 .card-box {
-    border: 1px solid #D30C7B;
+    border-left: 1px solid #93D24B;
+    border-right: 1px solid #93D24B;
     color: #D30C7B;
     margin: 20px;
     height: 300px;
     width: 80%;
     display: flex;
     flex-direction: column;
+    gap: 30px;
 }
 .title-pop-box {
     background-color: #D30C7B;
@@ -20,8 +22,7 @@
 .card-footer {
     background-color: #D30C7B;
     color: black;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: flex-start;
+    display: flex;
+    justify-content: center;
     gap: 10px;
 }

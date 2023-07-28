@@ -1,19 +1,11 @@
 import React from "react";
-import HomeRoomSlide from "./HomeRoomSlide";
+import HomeRoomExplorer from "./HomeRoomExplorer";
+import "./Home.css"
 export default function Home() {
   return (
-    <div style={{
-      color: 'white',
-      // padding: '40px',
-    }}>
-      <div style={{
-        // paddingLeft: '40px',
-        width: '100vh',
-        display: 'flex',
-        justifyContent: 'center'
-        // float: 'left'
-      }}>
-        <HomeRoomSlide/>
+    <div id="home-div">
+      <div id="home-room-div">
+        <HomeRoomExplorer/>
       </div>
     </div>
   );

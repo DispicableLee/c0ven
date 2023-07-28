@@ -1,10 +1,10 @@
 import React from "react";
 import HomeRoomCard from "./HomeRoomCard";
 import { useState, useEffect } from "react";
-import '../components/HomeRoomSlide.css'
+import '../components/HomeRoomExplorer.css'
 
 export default function HomeRoomSlide(){
-    const myRoomArray = [1,2]
+    const myRoomArray = [1,2, 3]
     const [fetchedRooms, setFetchedRooms] = useState([])
     //=========================== initial rooms fetch ==========================
     useEffect(()=>{
@@ -36,16 +36,31 @@ export default function HomeRoomSlide(){
     // ======================= return ========================================
     return (
 
-        <div id="rooms-gallery">
-            <aside className="room-slide-container">
-                <h1>my rooms</h1>
-                {myRooms}
-            </aside> 
+        <div id="explorer-home">
+            <h1>Rooms</h1>
+            <div id="explorer-window">
+                <aside>
+                    <h1>my rooms</h1>
+                    <div id="room-slides">
+                        {myRooms}
 
-            <aside className="room-slide-container">
-                <h1>Joined Rooms</h1>
-                {joinedRooms}
-            </aside>
+                    </div>
+                </aside> 
+
+                <aside>
+                    <h1>Joined Rooms</h1>
+                    <div id="room-slides">
+                        {joinedRooms}
+
+                    </div>
+                </aside>
+            </div>
+            <h1>Projects</h1>
+            <div id="explorer-window">
+
+            </div>
+
+
         </div>
     )
 }

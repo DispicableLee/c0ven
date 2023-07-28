@@ -1,8 +1,11 @@
 .room-div {
     border: 1px solid white;
-    height: 1000px;
-    margin: 20px;
-    display: flex;
+    width: 90vh;
+    height: 90vh;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
 
 }
 
@@ -10,16 +13,13 @@
     background-color: #34E4EA;
     width: 100%;
     height: 15%;
+    display: flex;
+    flex-direction: column;
 }
 
 
 
-.show-users-button {
-    background-color: #D30C7B;
-    height: 25%;
-    width: 30%;
-    box-shadow: none;
-}
+
 
 .room-user-card {
     border: 1px solid #34E4EA;
@@ -27,4 +27,13 @@
     padding: 0px 0px 0px 10px;
     color: #34E4EA;
     text-align: left
+}
+
+.room-bottom{
+    border-top: 1px solid #34E4EA;
+    background-color: black;
+    width: 100%;
+    height: 20%;
+    /* position: absolute; */
+    bottom: 0;
 }

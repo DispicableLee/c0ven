@@ -1,0 +1,13 @@
+#home-div{
+      display: flex;
+      color: white;
+      border: 1px solid white;
+      height: 1000px;
+      flex-direction: column;
+}
+
+#home-room-div{
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+}
