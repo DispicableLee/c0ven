@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectsBrowser from "./ProjectsBrowser";
-import "./ProjectsList.css";
+import "../styles/ProjectsList.css";
 
 export default function ProjectsList() {
   const callId = localStorage.id

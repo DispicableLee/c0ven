@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./ProjectsBrowser.css";
+import "../styles/ProjectsBrowser.css";
 
 export default function ProjectsBrowser({ fetchedProjects }) {
   //===== when clicking on each 5-row-card, its info will be rendered into showcase-window ======

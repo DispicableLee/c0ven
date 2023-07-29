@@ -1,5 +1,5 @@
 import React from "react";
-import "./FinalUploadPreview.css";
+import "../styles/FinalUploadPreview.css";
 
 export default function FinalUploadPreview () {
   return (

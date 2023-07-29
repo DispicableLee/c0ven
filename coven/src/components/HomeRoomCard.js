@@ -4,7 +4,7 @@ import { useState } from "react";
 import RenderRoom from "./RenderRoom";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import '../components/HomeRoomCard.css'
+import '../styles/HomeRoomCard.css'
 
 export default function HomeRoomCard({name, image, admins, projects, id}) {
   const navigate = useNavigate()

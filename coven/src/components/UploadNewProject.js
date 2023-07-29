@@ -1,7 +1,7 @@
 import React from "react"
 import { useState, useEffect } from "react"
 import FinalUploadPreview from "./FinalUploadPreview"
-import "../components/UploadNewProject.css"
+import "../styles/UploadNewProject.css"
 
 
 export default function UploadNewProject(){

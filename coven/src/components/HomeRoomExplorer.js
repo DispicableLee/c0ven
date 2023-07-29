@@ -1,10 +1,10 @@
 import React from "react";
 import HomeRoomCard from "./HomeRoomCard";
 import { useState, useEffect } from "react";
-import '../components/HomeRoomExplorer.css'
+import '../styles/HomeRoomExplorer.css'
 
 export default function HomeRoomSlide(){
-    const myRoomArray = [1,2, 3]
+    const myRoomArray = [1,2]
     const [fetchedRooms, setFetchedRooms] = useState([])
     //=========================== initial rooms fetch ==========================
     useEffect(()=>{

@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Smooch Sans';
+  src: local('Smooch Sans'), url(../styles/fonts/SmoochSans.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+.dialog-main{
+    background-color: black;
+    color:#D30C7B;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Smooch Sans';
+}
+
+.dialog-title{
+    border-bottom: 1px solid #D30C7B;
+}
+.input-box{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    padding: 62px 81px;
+    flex-direction: column;
+    align-items: center;
+    gap: 43px;
+}
+
+.input-box input{
+    background-color: black;
+    height: 50px;
+    width: 300px;
+    border: none;
+    border-bottom:#D30C7B;
+    color: white;
+    font-size: 30px;
+    outline: none;
+    border-bottom: 1px solid #D30C7B;
+}
+
+.input-box input:focus{
+}

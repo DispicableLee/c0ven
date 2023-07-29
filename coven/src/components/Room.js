@@ -1,6 +1,6 @@
 import React from "react";
 import RoomUsers from "./RoomUsers";
-import "./Room.css";
+import "../styles/Room.css";
 import MessageTile from "./MessageTile";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
