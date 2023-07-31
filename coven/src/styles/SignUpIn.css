@@ -31,14 +31,16 @@
 .input-box input{
     background-color: black;
     height: 50px;
-    width: 300px;
+    width: 100px;
     border: none;
     border-bottom:#D30C7B;
     color: white;
     font-size: 30px;
     outline: none;
     border-bottom: 1px solid #D30C7B;
+    transition: width 1s;
 }
 
 .input-box input:focus{
+    width: 300px;
 }

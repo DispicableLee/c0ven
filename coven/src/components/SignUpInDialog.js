@@ -1,14 +1,16 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/SignUpIn.css"
 import UserData from "./UserData";
 
 export default function SignUpInDialog() {
+  const navigate = useNavigate()
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
 
   function signIn(){
-    fetch(`http://localhost:4002/api/v2/endPoints/userlogin/${password}`)
+    fetch(`http://localhost:4002/api/v2/endPoints/userlogin/${username}/${password}`)
     .then((r)=>r.json())
     .then((json)=>{
       console.log(json._id)
@@ -18,7 +20,7 @@ export default function SignUpInDialog() {
       console.log(json.password)
       UserData.setImage(json.image)
       console.log(json.image)
-      window.location.reload()
+      navigate("/home")
     })
   }
 
@@ -28,14 +30,10 @@ export default function SignUpInDialog() {
         <h1>Sign In</h1>
       </div>
       <div className="input-box">
-        <input
-          type="text"
-          placeholder="username"
+        <input type="text" placeholder="Username"
           onChange={(e) => setUsername(e.target.value)}
         />
-        <input
-          type="text"
-          placeholder="password"
+        <input type="text" placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>

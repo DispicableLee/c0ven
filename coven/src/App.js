@@ -14,13 +14,20 @@ import UserData from './components/UserData'
 
 function App() {
   //==================== dialog states ===========================
+  const [dialog, setDialog] = useState(false)
+  function showDialog(){
+    console.log("hi")
+  }
 
   return (
   <div>
     <div className="App">
-      <SplashPage/>
+      {dialog ? 
+        <SignUpInDialog/>
+      :<></>} 
     </div>
       <Routes>
+        <Route path="/" element={<SplashPage/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/projects-list" element={<ProjectsList/>}/>
         <Route path="/room/:roomid" element={<Room/>} />

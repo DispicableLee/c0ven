@@ -15,7 +15,6 @@ export default function HomeRoomSlide(){
           });
         
     },[])
-    console.log(fetchedRooms)
     const myRooms = myRoomArray.map((r)=>{
         return (
             <HomeRoomCard 
@@ -37,20 +36,26 @@ export default function HomeRoomSlide(){
     return (
 
         <div id="explorer-home">
-            <h1>Rooms</h1>
+            <h1 id="tit">Rooms</h1>
             <div id="explorer-window">
                 <aside>
-                    <h1>my rooms</h1>
-                    <div id="room-slides">
-                        {myRooms}
+                    <div className="slide-name">
+                        <h1>my rooms</h1>
+                        <div id="room-slides">
+                            {myRooms}
+
+                        </div>
 
                     </div>
                 </aside> 
 
                 <aside>
-                    <h1>Joined Rooms</h1>
-                    <div id="room-slides">
-                        {joinedRooms}
+                    <div className="slide-name">
+                        <h1>Joined Rooms</h1>
+                        <div id="room-slides">
+                            {joinedRooms}
+
+                        </div>
 
                     </div>
                 </aside>

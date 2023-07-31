@@ -1,19 +1,22 @@
+/* === fonts ==== */
 @font-face {
   font-family: 'Smooch Sans';
   src: local('Smooch Sans'), url(./fonts/SmoochSans.ttf) format('truetype');
   /* other formats include: 'woff2', 'truetype, 'opentype',
                             'embedded-opentype', and 'svg' */
 }
-
-
-.home {
-  display: flex;
-  height: 1016px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
+/* === animations === */
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 
 
 #splash{
@@ -27,8 +30,11 @@
   flex-shrink: 0;
   border: 1px solid #D30C7B;
   font-family: 'Smooch Sans' ;
-  color:#D30C7B
+  color:#D30C7B;
+  animation: 2s ease-in-out 0s 1 slideUpFadeIn;
+  margin: auto;
 }
+
 #splash>div{
   display: flex;
   width: 551px;

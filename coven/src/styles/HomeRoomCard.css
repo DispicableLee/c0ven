@@ -1,3 +1,11 @@
+/*========================== fonts ============================*/
+@font-face {
+  font-family: 'Smooch Sans';
+  src: local('Smooch Sans'), url(../styles/fonts/SmoochSans.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
 .card-box {
     border-left: 1px solid #93D24B;
     border-right: 1px solid #93D24B;
@@ -8,6 +16,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    font-family: 'Smooch Sans';
 }
 .title-pop-box {
     background-color: #D30C7B;
@@ -25,4 +34,9 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+    height: 30%;
+}
+
+h3{
+    font-size: 30px;
 }

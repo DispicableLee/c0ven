@@ -1,22 +1,46 @@
-#explorer-home{
+/*========================== fonts ============================*/
+@font-face {
+  font-family: 'Smooch Sans';
+  src: local('Smooch Sans'), url(../styles/fonts/SmoochSans.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
 
+
+#explorer-home{
     width: 80%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    font-family: 'Smooch Sans';
+}
+/* title font styling */
+#tit{
+    margin: 0;
+}
+
+.slide-name{ 
+    font-size: 60px;
+    text-overflow: ellipsis;
+    width: inherit;
+}
+.slide-name h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 60px;
 }
 
 #explorer-window{
     display: flex;
-    gap: 200px;
+    gap: 100px;
     border-bottom: 1px solid white;
 }
 
 
 #explorer-window aside{
     /* overflow: auto; */
-    display: inline-flex;
+    display: flex;
     padding: 12px 20px;
     flex-direction: column;
     align-items: center;

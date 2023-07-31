@@ -4,6 +4,7 @@
       border: 1px solid white;
       height: 1000px;
       flex-direction: column;
+      align-items: center;
 }
 
 #home-room-div{

@@ -34,7 +34,7 @@ export default function HomeRoomCard({name, image, admins, projects, id}) {
         }}>
         </Box>
       <div className="card-footer">
-        <h1>i am not logged in</h1>
+        <h3>i am not logged in</h3>
       </div>
     </div>
   );
