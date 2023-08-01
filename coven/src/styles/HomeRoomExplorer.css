@@ -3,10 +3,10 @@
   font-family: 'Smooch Sans';
   src: local('Smooch Sans'), url(../styles/fonts/SmoochSans.ttf) format('truetype');
   /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
+  'embedded-opentype', and 'svg' */
 }
 
-
+/* ========================== main div styling ========================= */
 #explorer-home{
     width: 80%;
     display: flex;
@@ -15,29 +15,19 @@
     align-items: center;
     font-family: 'Smooch Sans';
 }
-/* title font styling */
+/* ========================= title font styling ========================= */
 #tit{
     margin: 0;
 }
-
-.slide-name{ 
-    font-size: 60px;
-    text-overflow: ellipsis;
-    width: inherit;
-}
-.slide-name h1{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 60px;
-}
-
+/* ===================== explorer window styling ====================== */
 #explorer-window{
     display: flex;
     gap: 100px;
     border-bottom: 1px solid white;
+    /* margin-bottom: 10px; */
 }
 
-
+/* ===================== slide aside styling ===================== */
 #explorer-window aside{
     /* overflow: auto; */
     display: flex;
@@ -50,13 +40,26 @@
     width: 400px;
     height: 800px;
 }
-
-
 #explorer-window aside:hover{
     border-left: 1px solid #9F9FAD;
     border-right: 1px solid #9F9FAD
 }
+/* ==================== aside title styling ========================= */
+.slide-name{ 
+    display: flex;
+    font-size: 60px;
+    text-overflow: ellipsis;
+    width: 400px;
+    justify-content: center;
+}
+.slide-name h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 40px;
+    letter-spacing: 8px;
+}
 
+/* ======================== room slide ==================== */
 #room-slides{
     overflow-y: scroll;
     width: 400px;
@@ -64,10 +67,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid#9F9FAD;
+    /* border: 1px solid#9F9FAD; */
+    justify-content: center;
 
 }
-
 #room-slides::-webkit-scrollbar{
     display: none;
 }
+
+#button-expand{
+    justify-content: center;
+    display: flex;
+    /* border: 1px solid white; */
+    width: 60%;
+    height: 10%;
+    margin: 10px;
+    transition: 1s;
+}
+
+
+#button-expand:hover{
+    width: 100%;
+    background-color: aqua;
+    cursor: pointer;
+        letter-spacing: 10px;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke-color: aliceblue;
+}
+
+

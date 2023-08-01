@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Smooch Sans';
+  src: local('Smooch Sans'), url(./fonts/SmoochSans.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+
+
+
+#projects-list-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    font-family: 'Smooch Sans';
+}
+#upload-new{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #34E4EA;
+    border: 1px solid #34E4EA;
+    height: 100px;
+    width: 400px;
+    margin: 20px;
+    padding: 20px;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 0;
+    transition: 1s;
+}
+#upload-new:hover{
+    width: 100%;
+    font-weight: 800;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke: #34E4EA;
+}
+
+
+
+.cont-spec{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+    padding-bottom: 20px;
+}
+
+.cont-spec-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    width: 300px;
+    border: 1px solid white;
+    padding: 12px 20px;
+    color: white;
+    text-overflow: ellipsis;
+}
+
+
+.project-slide-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    border: 1px solid #93D24B;
+    color: #93D24B;
+}
+

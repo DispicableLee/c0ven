@@ -22,6 +22,7 @@
     background-color: #D30C7B;
     color: black;
     display: flex;
+    justify-content: center;
     align-items: center;
     height: 52px;
     gap: 10px;
@@ -40,3 +41,12 @@
 h3{
     font-size: 30px;
 }
+
+:any-link{
+    font-family: 'Smooch Sans';
+    font-size: 30px;
+    font-weight: 700;
+    color: #93D24B;
+    text-decoration: none;
+}
+

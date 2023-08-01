@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import SignUpInDialog from "./components/SignUpInDialog";
 import Footer from "./components/Footer";
 import Room from "./components/Room";
-import ProjectsList from "./components/ProjectsList";
+import ProjectsExplorer from "./components/ProjectsExplorer";
 import UploadNewProject from "./components/UploadNewProject";
 import SplashPage from "./components/SplashPage";
 import { useState, useEffect } from "react";
@@ -29,7 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SplashPage/>}/>
         <Route path="/home" element={<Home/>}/>
-        <Route path="/projects-list" element={<ProjectsList/>}/>
+        <Route path="/projects-explorer" element={<ProjectsExplorer/>}/>
         <Route path="/room/:roomid" element={<Room/>} />
         <Route path="upload-new-project" element={<UploadNewProject/>}/>
       </Routes>

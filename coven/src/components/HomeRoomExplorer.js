@@ -2,8 +2,10 @@ import React from "react";
 import HomeRoomCard from "./HomeRoomCard";
 import { useState, useEffect } from "react";
 import '../styles/HomeRoomExplorer.css'
+import { useNavigate } from "react-router-dom";
 
-export default function HomeRoomSlide(){
+export default function HomeRoomExplorer(){
+    const navigate = useNavigate()
     const myRoomArray = [1,2]
     const [fetchedRooms, setFetchedRooms] = useState([])
     //=========================== initial rooms fetch ==========================
@@ -41,31 +43,24 @@ export default function HomeRoomSlide(){
                 <aside>
                     <div className="slide-name">
                         <h1>my rooms</h1>
+                    </div>
                         <div id="room-slides">
                             {myRooms}
-
                         </div>
-
-                    </div>
                 </aside> 
-
                 <aside>
                     <div className="slide-name">
                         <h1>Joined Rooms</h1>
+                    </div>
                         <div id="room-slides">
                             {joinedRooms}
-
                         </div>
-
-                    </div>
                 </aside>
             </div>
-            <h1>Projects</h1>
-            <div id="explorer-window">
-
-            </div>
-
-
+                <h1 id="button-expand" >See all Rooms</h1>
+                <h1 id="button-expand" 
+                    onClick={(e)=>navigate("/projects-list")}
+                >Projects</h1>
         </div>
     )
 }

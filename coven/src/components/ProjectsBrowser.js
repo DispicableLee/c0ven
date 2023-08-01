@@ -6,6 +6,8 @@ export default function ProjectsBrowser({ fetchedProjects }) {
   //===== when clicking on each 5-row-card, its info will be rendered into showcase-window ======
   const [showcaseTitle, setShowcaseTitle] = useState("")
   const [showcaseImage, setShowcaseImage] = useState("")
+  const [showcaseDescription, setShowcaseDescription] = useState("")
+  const [showcaseLink, setShowcaseLink] = useState("")
   const [projectOverall, setProjectOverall] = useState([])
   const [contRow, setContRow] = useState([])
 
@@ -16,8 +18,10 @@ export default function ProjectsBrowser({ fetchedProjects }) {
     .then((r)=>r.json())
     .then((json)=>{
       console.log(json)
-      setProjectOverall(json[0])
-      setContRow(json[1])
+      setShowcaseDescription(json.description)
+      setShowcaseLink(json.link)
+      // setProjectOverall(json[0])
+      // setContRow(json[1])
     })
   }
   //========================== 5 projects row ============================
@@ -27,7 +31,7 @@ export default function ProjectsBrowser({ fetchedProjects }) {
         onClick={()=>handleWindowChange(card)}
       >
         <div className="frc-title">
-          <h2>{card.name}</h2>
+          <h3>{card.name}</h3>
         </div>
         <img
           className="frc-image"
@@ -72,12 +76,16 @@ export default function ProjectsBrowser({ fetchedProjects }) {
         <div className="showcase-instant-info">
           <img src={showcaseImage}/>
           <aside>
-            <h1>contributors</h1>
+            <h3>contributors</h3>
             {/* {contributorsList} */}
           </aside>
         </div>
-        <div className="title-description">
-          <h1>{showcaseTitle}</h1>
+        <div className="lower-half">
+          <div id="title-description">
+            <h1>{showcaseTitle}</h1>
+            <p>{showcaseDescription}</p>
+
+          </div>
           {/* <a href={contRow.}/> */}
         </div>
       </div>

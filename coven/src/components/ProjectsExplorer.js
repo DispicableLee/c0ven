@@ -2,9 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectsBrowser from "./ProjectsBrowser";
-import "../styles/ProjectsList.css";
+import "../styles/ProjectsExplorer.css";
 
-export default function ProjectsList() {
+export default function ProjectsExplorer() {
   const callId = localStorage.id
     useEffect(()=>{
     //================= 5-project-browser-card fetch ===================
@@ -22,21 +22,10 @@ export default function ProjectsList() {
   const renderedContributingProjects = cArra.map((c) => {
     return (
       <div
-        className="cproject-card"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-end",
-          alignItems: "flex-start",
-          margin: "10px",
-          height: "300px",
-          width: "300px",
-          border: "1px solid #93D24B",
-          color: '#93D24B'
-        }}
+        className="project-slide-card"
         onClick={()=>{console.log(c._id)}}
       >
-        <h2>{c.name}</h2>
+        <h3>{c.name}</h3>
       </div>
     );
   });
@@ -44,41 +33,25 @@ export default function ProjectsList() {
   const psArray = [1, 1, 1];
   const renderedSpectatingProjects = psArray.map((p) => {
     return (
-      <div
-        className="cproject-card"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-end",
-          alignItems: "flex-start",
-          margin: "10px",
-          height: "300px",
-          width: "300px",
-          border: "1px solid #93D24B",
-        }}
-      ></div>
+      <div className="project-slide-card">
+
+      </div>
     );
   });
-
+// ====================== return =================================
   return (
-    <div className="projects-list-box">
-
-      <div className="cont-spec"
-        style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            gap: '100px'
-        }}
-      >
+    <div id="projects-list-box">
+      <div className="cont-spec">
         <div className="cont-spec-projects">
-
+          <h2>My Projects</h2>
           {renderedContributingProjects}
         </div>
         <div className="cont-spec-projects">
+          <h2>Projects I'm contributing to</h2>
             {renderedSpectatingProjects}
         </div>
       </div>
+      <h2 id="upload-new">Upload New Project</h2>
       <ProjectsBrowser fetchedProjects={fetchedProjects}/>
     </div>
   );
