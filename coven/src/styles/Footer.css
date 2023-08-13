@@ -1,10 +1,21 @@
+/*========================== fonts ============================*/
+@font-face {
+  font-family: 'Smooch Sans';
+  src: local('Smooch Sans'), url(../styles/fonts/SmoochSans.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+
+
+
 #footer-button {
     background-color: #D30C7B;
     height: 125px;
     width: 15%;
-    font-size: 40px;
+    font-size: 60px;
     top: auto;
     bottom: 0;
-    right: 0;
-    position: fixed
+    position: fixed;
+    font-family: "Smooch Sans";
 }

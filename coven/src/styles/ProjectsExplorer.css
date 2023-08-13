@@ -31,8 +31,11 @@
     transition: 1s;
 }
 #upload-new:hover{
+    cursor: pointer;
     width: 100%;
     font-weight: 800;
+    letter-spacing: 10px;
+    background-color: #34E4EA;
     -webkit-text-fill-color: black;
     -webkit-text-stroke: #34E4EA;
 }

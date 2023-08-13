@@ -6,6 +6,19 @@
   'embedded-opentype', and 'svg' */
 }
 
+
+/* -------------------- Animations -------------------- */
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ========================== main div styling ========================= */
 #explorer-home{
     width: 80%;
@@ -14,6 +27,7 @@
     flex-direction: column;
     align-items: center;
     font-family: 'Smooch Sans';
+    animation: 1s ease-out 0s 1 slideUpFadeIn;
 }
 /* ========================= title font styling ========================= */
 #tit{
@@ -39,6 +53,7 @@
     margin: 20px;
     width: 400px;
     height: 800px;
+    animation: 1.2s ease-out 0s 1 slideUpFadeIn;
 }
 #explorer-window aside:hover{
     border-left: 1px solid #9F9FAD;
@@ -83,6 +98,7 @@
     height: 10%;
     margin: 10px;
     transition: 1s;
+    animation: 1.2s ease-out 0s 1 slideUpFadeIn;
 }
 
 

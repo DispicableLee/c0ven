@@ -1,10 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import ProjectCard from "./ProjectCard";
 import ProjectsBrowser from "./ProjectsBrowser";
 import "../styles/ProjectsExplorer.css";
 
 export default function ProjectsExplorer() {
+  const navigate = useNavigate()
   const callId = localStorage.id
     useEffect(()=>{
     //================= 5-project-browser-card fetch ===================
@@ -51,7 +53,9 @@ export default function ProjectsExplorer() {
             {renderedSpectatingProjects}
         </div>
       </div>
-      <h2 id="upload-new">Upload New Project</h2>
+      <h2 id="upload-new"
+        onClick={(e)=>navigate("/upload-new-project")}
+        >Upload New Project</h2>
       <ProjectsBrowser fetchedProjects={fetchedProjects}/>
     </div>
   );

@@ -15,11 +15,8 @@ export default function SignUpInDialog() {
     .then((json)=>{
       console.log(json._id)
       UserData.setId(json._id)
-      console.log(json.username)
       UserData.setUsername(json.username)
-      console.log(json.password)
       UserData.setImage(json.image)
-      console.log(json.image)
       navigate("/home")
     })
   }

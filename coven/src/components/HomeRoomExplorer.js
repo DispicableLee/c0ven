@@ -4,19 +4,10 @@ import { useState, useEffect } from "react";
 import '../styles/HomeRoomExplorer.css'
 import { useNavigate } from "react-router-dom";
 
-export default function HomeRoomExplorer(){
+export default function HomeRoomExplorer({fetchedRooms}){
     const navigate = useNavigate()
     const myRoomArray = [1,2]
-    const [fetchedRooms, setFetchedRooms] = useState([])
     //=========================== initial rooms fetch ==========================
-    useEffect(()=>{
-        fetch("http://localhost:4002/api/v2/endPoints/search/all/rooms")
-          .then((res)=>res.json())
-          .then((json)=>{
-            setFetchedRooms(json)
-          });
-        
-    },[])
     const myRooms = myRoomArray.map((r)=>{
         return (
             <HomeRoomCard 
@@ -59,7 +50,7 @@ export default function HomeRoomExplorer(){
             </div>
                 <h1 id="button-expand" >See all Rooms</h1>
                 <h1 id="button-expand" 
-                    onClick={(e)=>navigate("/projects-list")}
+                    onClick={(e)=>navigate("/projects-explorer")}
                 >Projects</h1>
         </div>
     )

@@ -8,6 +8,7 @@ import Room from "./components/Room";
 import ProjectsExplorer from "./components/ProjectsExplorer";
 import UploadNewProject from "./components/UploadNewProject";
 import SplashPage from "./components/SplashPage";
+import ProfileMain from "./components/ProfileMain";
 import { useState, useEffect } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import UserData from './components/UserData'
@@ -15,16 +16,19 @@ import UserData from './components/UserData'
 function App() {
   //==================== dialog states ===========================
   const [dialog, setDialog] = useState(false)
-  function showDialog(){
-    console.log("hi")
-  }
+  useEffect(()=>{
+    if(localStorage.id){
+      setDialog(!dialog)
+    }
+  },[])
 
   return (
   <div>
     <div className="App">
-      {dialog ? 
-        <SignUpInDialog/>
-      :<></>} 
+      {dialog? <NavBar/> : <></>}
+      {dialog? <Footer/> : <></>}
+
+
     </div>
       <Routes>
         <Route path="/" element={<SplashPage/>}/>
@@ -32,6 +36,7 @@ function App() {
         <Route path="/projects-explorer" element={<ProjectsExplorer/>}/>
         <Route path="/room/:roomid" element={<Room/>} />
         <Route path="upload-new-project" element={<UploadNewProject/>}/>
+        <Route path="/profile-main" element={<ProfileMain/>}/>
       </Routes>
   </div>
   );

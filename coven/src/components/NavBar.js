@@ -10,14 +10,27 @@ import '../styles/NavBar.css'
 
 
 export default function NavBar() {
+  const navigate = useNavigate()
+  function navToProf(){
+    navigate("/profile-main")
+  }
   return (
     <div id="nav-bar">
         <div className='title-header'>
-          <h1 className='title'>
-            <Link to="/">c0ven</Link>
-          </h1>
-
+          <div className='title'>
+            <Link to="/home">c0ven</Link>
+          </div>
         </div>
+          <div id='nav-button'>
+
+          </div>
+          <div id='nav-button'
+            onClick={navToProf}
+          >
+            <h3>
+              Profile
+            </h3>
+          </div>
     </div>
   );
 }
