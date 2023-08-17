@@ -18,9 +18,11 @@
     margin: 20px;
     gap: 30px;
     border: 1px solid #9F9FAD;
-    width: 75%;
+    max-width: 75%;
     height: 120px;
     justify-content: center;
+    overflow: hidden;
+    
 }
 
 
@@ -116,8 +118,8 @@
 }
 
 #preview-description-info a{
-    margin-top: 20px;
+    margin: 20px;
     color: #D30C7B;
     width: 100px;
-    font-size: 40px;
+    font-size: 50px;
 }

@@ -59,7 +59,10 @@
     border: 1px solid white;
     padding: 12px 20px;
     color: white;
-    text-overflow: ellipsis;
+    overflow: scroll
+}
+.cont-spec-projects::-webkit-scrollbar{
+    display: none;
 }
 
 
@@ -68,7 +71,7 @@
     flex-direction: column;
     align-items: center;
     margin: 10px;
-    height: 300px;
+    min-height: 150px;
     width: 300px;
     border: 1px solid #93D24B;
     color: #93D24B;

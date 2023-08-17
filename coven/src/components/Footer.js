@@ -6,14 +6,16 @@ import Toolbar from "@mui/material/Toolbar";
 import { Button } from "@mui/material";
 import { fontSize, maxHeight } from "@mui/system";
 import UserData from "./UserData";
-import FooterSignOut from "./FooterSignOut"
+import { useNavigate } from "react-router-dom";
 import '../styles/Footer.css'
 
-export default function Footer({ openSignUpIn }) {
+export default function Footer() {
   const userID = localStorage.id;
+  const navigate = useNavigate()
   function openDialog() {
     console.log("click");
-    openSignUpIn();
+    UserData.signOut()
+    navigate("/")
   }
   return userID ? (
     // ========================= SIGN OUT STATE ======================================

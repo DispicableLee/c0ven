@@ -6,6 +6,7 @@ import "../styles/ProjectsBrowser.css";
 export default function ProjectsBrowser({ fetchedProjects }) {
   const navigate = useNavigate();
   //===== when clicking on each 5-row-card, its info will be rendered into showcase-window ======
+  const [linkShow, setLinkShow] = useState(false)
   const [showcaseTitle, setShowcaseTitle] = useState("");
   const [showcaseImage, setShowcaseImage] = useState("");
   const [showcaseDescription, setShowcaseDescription] = useState("");
@@ -26,6 +27,7 @@ export default function ProjectsBrowser({ fetchedProjects }) {
         setShowcaseImage(json.image)
         // setProjectOverall(json[0])
         // setContRow(json[1])
+        setLinkShow(!linkShow)
       });
   }
   //========================== 5 projects row ============================
@@ -79,13 +81,24 @@ export default function ProjectsBrowser({ fetchedProjects }) {
 
         <section id="preview-description-info">
           <div>
-            <h2>{showcaseTitle}</h2>
+            <h2
+            className="major-header"
+            >{showcaseTitle}</h2>
             <p>
               {showcaseDescription}
             </p>
           </div>
           <div>
-            <h2>{showcaseLink}</h2>
+            {linkShow? 
+              <a 
+                href={showcaseLink}
+                target="_blank"
+                className="major-header"
+                >
+                  link
+                </a> 
+                : 
+                <></>}
           </div>
         </section>
       </div>
